@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"math/rand"
 )
 func main(){
@@ -10,10 +9,24 @@ func main(){
 	surname, age := "Carnass", 25
 	const basicPlanName = "Basic Plan"
 
-	fmt.Println(name, surname, age)
-	fmt.Println("HI THERE")
-	fmt.Println("HI bro")
+	fmt.Println(name, surname, age, basicPlanName)
 	fmt.Println("My favorite number is", rand.Intn(10))
+
+	type human struct{
+		Name string
+		Surname string
+		Age int
+	}
+	type MedicalInfo struct{
+		human
+		bloodType string
+	}
+	type Rect struct { 
+		len, wid int
+	} 
+	Micheal:= human{"Micheal","Hersey",35}
+
+	fmt.Println(Micheal)
 	
 	fmt.Scanln()
 }
@@ -88,3 +101,24 @@ func getJustJoe(x string){
 	x,_ = JohnAndDoe()
 	fmt.Println(x)
 }
+// taking a struct 
+type Rect struct { 
+    len, wid int
+} 
+  
+func (re Rect) Area() int { 
+    return re.len * re.wid 
+} 
+
+type tank interface {   
+	// function categorizer
+    Tarea() float64 
+}   
+type myvalue struct { 
+    radius float64 
+    height float64 
+}   
+func (m myvalue) Tarea() float64 { 
+  
+    return 2*m.radius*m.height + 2*3.14*m.radius*m.radius 
+} 
