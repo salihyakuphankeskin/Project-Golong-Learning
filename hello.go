@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"math/rand"
 )
-
-
 func main(){
 	var name string = "Jeff"
 	surname, age := "Carnass", 25
@@ -18,6 +17,7 @@ func main(){
 	
 	fmt.Scanln()
 }
+
 func typeFinder(value any){
 	fmt.Printf("The type of penniesPerText is %T\n", value)
 }
@@ -37,7 +37,6 @@ func secondsInHour(){
 
 	fmt.Println("number of seconds in an hour:", secondsInHour)
 }
-
 func printFunctions(){
 	var myString string
 	//	Interpolate the default representation
@@ -74,4 +73,18 @@ func ifStatements(){
 	if currentColor:="Green";currentColor == appleColor{
 		fmt.Println("current color and apple color is matched")
 	}
+}
+func add(x, y int)  int{
+	return x+y	
+}
+func add2Times(f func(int, int) int, x int) int {
+	result := f(x, x)
+	return f(result, x)
+}
+func JohnAndDoe() (string,string){
+	return "John", "Doe"
+}
+func getJustJoe(x string){	
+	x,_ = JohnAndDoe()
+	fmt.Println(x)
 }
