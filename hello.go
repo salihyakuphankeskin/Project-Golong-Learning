@@ -11,6 +11,11 @@ func main(){
 
 	fmt.Println(name, surname, age, basicPlanName)
 	fmt.Println("My favorite number is", rand.Intn(10))
+	myNewNumbers :=[]int{0,1,2,3,4,5,6,7,8,9}
+	myNewNumbers = append(myNewNumbers, 10)
+	mySlice := make([]int,5)
+	mySlice2 := []int{}
+	fmt.Println(myNewNumbers, mySlice,mySlice2)
 
 	type human struct{
 		Name string
