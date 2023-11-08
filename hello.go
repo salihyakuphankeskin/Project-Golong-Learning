@@ -88,7 +88,6 @@ func ifStatements() {
 		fmt.Println("one is bigger than zero")
 	}
 	appleColor := "Red"
-
 	if currentColor := "Green"; currentColor == appleColor {
 		fmt.Println("current color and apple color is matched")
 	}
@@ -107,16 +106,12 @@ func getJustJoe(x string) {
 	x, _ = JohnAndDoe()
 	fmt.Println(x)
 }
-
-// taking a struct
 type Rect struct {
 	len, wid int
 }
-
 func (re Rect) Area() int {
 	return re.len * re.wid
 }
-
 type tank interface {
 	// function categorizer
 	Tarea() float64
@@ -125,17 +120,26 @@ type myvalue struct {
 	radius float64
 	height float64
 }
-
 func (m myvalue) Tarea() float64 {
-
 	return 2*m.radius*m.height + 2*3.14*m.radius*m.radius
 }
-
 func sums(nums ...int) int {
 	var num int = 0
 	for i := 0; i < len(nums); i++ {
 		num += nums[i]
 	}
 	return num
-
+}
+ func sliceRange(){
+	fruits := []string{"apple", "banana", "grape"}
+	for i, fruit := range fruits {
+		fmt.Println(i, fruit)
+	}
+}
+func mapsStart()  {
+	ages := map[string]int{
+		"John": 37,
+		"Mary": 21,
+	}
+	fmt.Println(len(ages)) // 2	
 }
