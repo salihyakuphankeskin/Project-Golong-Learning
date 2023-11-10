@@ -158,9 +158,6 @@ func mapsStart() {
 		"John": 37,
 		"Mary": 21,
 	}
-<<<<<<< HEAD
-	fmt.Println(len(ages)) // 2	
-=======
 	fmt.Println(len(ages)) // 2
 }
 func aggregate(a, b, c int, arithmetic func(int, int) int) int {
@@ -198,5 +195,4 @@ func concatter() func(string) string {
 		doc += word + " "
 		return doc
 	}
->>>>>>> 3bf2291360b3ce33d68b7f4da9b29a99a09eee89
 }
